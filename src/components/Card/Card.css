@@ -1,0 +1,16 @@
+.beerContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.cardFront {
+  height: 300px;
+  width: 150px;
+  border: 2px solid black;
+  background-color: lightskyblue;
+}
+.image {
+  height: 150px;
+}

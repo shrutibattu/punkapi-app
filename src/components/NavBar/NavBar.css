@@ -1,0 +1,10 @@
+.nav {
+  padding: 20px;
+  height: 40px;
+  width: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid black;
+}
