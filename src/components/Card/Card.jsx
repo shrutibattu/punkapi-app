@@ -4,12 +4,13 @@ import "./Card.css";
 
 const Card = (props) => {
   const cardList = props.list;
+
   return (
     <div className="beerContainer">
       {cardList.map((card) => {
         return (
           <div className="cardFront">
-            <img className="image" src={card.image_url}></img>
+            <img className="image" src={card.image_url} alt=""></img>
             <h2>{card.name}</h2>
             <h3>{card.id}</h3>
           </div>

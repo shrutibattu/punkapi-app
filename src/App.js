@@ -17,6 +17,9 @@ function App() {
         setBeerData(jsonResponse);
       });
   };
+  useEffect(() => {
+    getAllBeer();
+  }, []);
 
   //--------------------------------------------------------------
   useEffect(() => {
@@ -28,10 +31,6 @@ function App() {
         setBeerData(jsonResponse);
       });
   }, [searchText]);
-
-  useEffect(() => {
-    getAllBeer();
-  }, []);
 
   const handleBlur = (event) => {
     const userInput = event.target.value;
