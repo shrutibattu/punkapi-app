@@ -1,10 +1,23 @@
 import React from "react";
+import "./SearchBar.css";
 const SearchBar = (props) => {
   const updateSearch = props.handleSearch;
 
   return (
-    <div>
-      <input type="text" placeholder="search here..." onBlur={updateSearch} />
+    <div className="searchbox">
+      <input
+        className="search-txt"
+        type="text"
+        placeholder="Search here..."
+        onBlur={updateSearch}
+      />
+      <div>
+        <select className="button">
+          <option value="filter">Filter</option>
+          <option value="malt">Malt</option>
+          <option value="content">Alcohol Content</option>
+        </select>
+      </div>
     </div>
   );
 };

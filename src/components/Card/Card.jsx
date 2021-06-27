@@ -11,8 +11,8 @@ const Card = (props) => {
         return (
           <div className="cardFront">
             <img className="image" src={card.image_url} alt=""></img>
-            <h2>{card.name}</h2>
-            <h3>{card.id}</h3>
+            <h4 className="name">{card.name}</h4>
+            <h5 className="id">{card.id}</h5>
           </div>
         );
       })}
