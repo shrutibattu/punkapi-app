@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [beerData, setBeerData] = useState([]);
   const [searchText, setSearchText] = useState("buzz");
+  const [maltFilter, setMaltFilter] = useState("Caramalt");
 
   const getAllBeer = () => {
     fetch("https://api.punkapi.com/v2/beers")
@@ -23,14 +24,19 @@ function App() {
 
   //--------------------------------------------------------------
   useEffect(() => {
-    fetch("https://api.punkapi.com/v2/beers?beer_name=" + searchText)
+    fetch(
+      "https://api.punkapi.com/v2/beers?beer_name=" +
+        searchText +
+        "&malt=" +
+        maltFilter
+    )
       .then((response) => {
         return response.json();
       })
       .then((jsonResponse) => {
         setBeerData(jsonResponse);
       });
-  }, [searchText]);
+  }, [searchText, maltFilter]);
 
   const handleBlur = (event) => {
     const userInput = event.target.value;
@@ -40,7 +46,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <SearchBar handleSearch={handleBlur} />
+      <SearchBar
+        handleSearch={setSearchText}
+        handleMaltFilter={setMaltFilter}
+      />
       <Card list={beerData} />
     </div>
   );
