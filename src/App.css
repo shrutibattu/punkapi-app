@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #3db7bb, #5d8b99);
+  /* background-image: linear-gradient(120deg, #3db7bb, #5d8b99); */
+  background-image: url(./images/beer.jpg);
 
   color: white;
 }
