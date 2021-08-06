@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  min-width: 300px;
 }
 
 .cardFront {
@@ -22,4 +23,37 @@
   min-width: 4rem;
   max-width: 4rem;
   /* height: 150px; */
+}
+@media screen and (max-width: 500px) {
+  .beerContainer {
+    margin: 7rem 2rem 2rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cardFront {
+    height: 12rem;
+    width: 8rem;
+  }
+  .image {
+    min-width: 2rem;
+    max-width: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .beerContainer {
+    margin: 7rem 2rem 2rem 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .cardFront {
+    height: 15rem;
+    width: 10rem;
+  }
+  .image {
+    min-width: 3rem;
+    max-width: 3rem;
+  }
 }
